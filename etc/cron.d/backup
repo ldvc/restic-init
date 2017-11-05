@@ -1,0 +1,16 @@
+# Use the hash sign to prefix a comment
+# +---------------- minute (0 - 59)
+# |  +------------- hour (0 - 23)
+# |  |  +---------- day of month (1 - 31)
+# |  |  |  +------- month (1 - 12)
+# |  |  |  |  +---- day of week (0 - 7) (Sunday=0 or 7)
+# |  |  |  |  |
+# *  *  *  *  *  command to be executed
+#--------------------------------------------------------------------------
+#MAILTO=user@example.com
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+# debug path
+#*   * * * *    root    env > /tmp/env_dump.txt
+
+#30 04 * * *    root    /usr/local/bin/backup REPONAME local >/dev/null 2>&1
+30 04 * * *    root    /usr/local/bin/backup REPONAME local

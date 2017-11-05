@@ -1,0 +1,6 @@
+
+Host backup
+  HostName backup.example.com
+  Port 4222
+  User backup
+  IdentityFile /root/.ssh/id_ed25519
