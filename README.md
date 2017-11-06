@@ -34,7 +34,7 @@ Would you like to continue?
 
 ## Meta
 
-Your Name – [@ludovicterrier](https://twitter.com/ludovicterrier) – ludovic+github@terrier.im
+Ludovic TERRIER – [@ludovicterrier](https://twitter.com/ludovicterrier) – ludovic+github@terrier.im
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
