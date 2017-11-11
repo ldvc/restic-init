@@ -148,12 +148,13 @@ set_cron_task() {
 end_info() {
   echo "-------------------------------------------------------------------------------------------------"
   echo "Remaining steps:"
-  echo "  1. customize /root/.ssh/config"
-  echo "  2. check /etc/backup/local.exclude for more exclusion"
-  echo "  3. customize time execution in /etc/cron.d/backup"
+  echo "  * customize /root/.ssh/config"
+  echo "  * check /etc/backup/local.exclude for more exclusion"
+  echo "  * customize time execution in /etc/cron.d/backup"
   if [ ! "$KEY" == '' ]; then 
-    echo "  4. store your encryption key: $KEY"
+    echo "  * store your encryption key: $KEY"
   fi
+  echo "  * initialize your restic repo: backup $NAME init"
   echo "-------------------------------------------------------------------------------------------------"
 }
 
