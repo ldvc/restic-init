@@ -111,8 +111,8 @@ get_restic() {
     cd /usr/local/bin || exit
     #TODO: check sum256
     wget --quiet https://github.com/restic/restic/releases/download/$VERSION/restic_${VERSION#"v"}_${os}_${arch}.bz2
-    bunzip2 restic_0.7.3_${os}_${arch}.bz2
-    ln -s restic_0.7.3_${os}_${arch} restic
+    bunzip2 restic_${VERSION#"v"}_${os}_${arch}.bz2
+    ln -s restic_${VERSION#"v"}_${os}_${arch} restic
     chmod 755 /usr/local/bin/restic
     cd - > /dev/null 2>&1
 
