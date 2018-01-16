@@ -47,6 +47,11 @@ intro() {
   fi
 }
 
+checks() {
+  command -v pwgen >/dev/null 2>&1 || { err "pwgen is missing, please install it."; exit 1; }
+  command -v git >/dev/null 2>&1 || { err "git is missing, please install it."; exit 1; }
+}
+
 get_env() {
   # to be enhanced...
   case $(uname -m) in 
@@ -159,6 +164,7 @@ end_info() {
   echo "-------------------------------------------------------------------------------------------------"
 }
 
+checks
 intro
 get_env
 get_restic_tools
