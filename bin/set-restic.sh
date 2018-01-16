@@ -27,6 +27,7 @@ readonly NOW=$(date +"%Y%m%d")
 NAME=$1
 METHOD=$2
 SCRIPT_DIR="/root/scripts"
+EXEC_DIR="${BASH_SOURCE%/*}/"
 KEY=''
 
 
@@ -131,16 +132,16 @@ get_restic() {
 set_ssh_config() {
   if [ ! -f /root/.ssh/config ]; then
     info "creating SSH config file"
-    cp ../ssh/config /root/.ssh/
+    cp ${EXEC_DIR}../ssh/config /root/.ssh/
   else
     info "found SSH config file, adding example host"
-    cat ../ssh/config >> /root/.ssh/config
+    cat ${EXEC_DIR}../ssh/config >> /root/.ssh/config
   fi
 }
 
 set_cron_task() {
   if [ ! -f /etc/cron.d/backup ]; then
-    cp ../etc/cron.d/backup /etc/cron.d/
+    cp ${EXEC_DIR}../etc/cron.d/backup /etc/cron.d/
     sed -i /etc/cron.d/backup -e "s|backup REPONAME local|backup $NAME local|g"
   fi
 }
